@@ -22,12 +22,10 @@ public class Part2 {
         Scanner in = new Scanner(System.in);
         String input1 = in.next();
         StringBuilder sb = new StringBuilder();
-        int input1Length = input1.length();
 
-        for (int i = 0; i < input1Length; i++) {
-            char ch = input1.charAt(i);
-            String str = Character.toString(ch);
-            if (Character.isUpperCase(ch)) {
+        for (char x : input1.toCharArray()) {
+            String str = Character.toString(x);
+            if (Character.isUpperCase(x)) {
                 sb.append(str.toLowerCase());
             } else {
                 sb.append(str.toUpperCase());
