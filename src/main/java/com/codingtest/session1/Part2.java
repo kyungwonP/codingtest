@@ -19,8 +19,14 @@ public class Part2 {
      * @param args
      */
     public static void main(String[] args) {
+        Part2 main = new Part2();
         Scanner in = new Scanner(System.in);
         String input1 = in.next();
+
+        System.out.println(main.solution(input1));
+    }
+
+    public String solution(String input1) {
         StringBuilder sb = new StringBuilder();
 
         for (char x : input1.toCharArray()) {
@@ -32,6 +38,6 @@ public class Part2 {
             }
         }
 
-        System.out.println(sb);
+        return sb.toString();
     }
 }
