@@ -25,7 +25,7 @@ public class Test3 {
 
     private String solution(String line) {
         String[] words = line.split(" ");
-        String result = "";
+        String result = words[0];
 
         for (String word : words) {
             if (word.length() > result.length()) {
