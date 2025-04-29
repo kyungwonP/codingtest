@@ -35,18 +35,18 @@ public class Test12 {
     public static void main(String[] args) {
         Test12 t = new Test12();
         Scanner in = new Scanner(System.in);
+        int count = in.nextInt();
+        in.nextLine(); // 엔터 제거
         String line = in.nextLine();
-        System.out.println(t.solution(line));
+        System.out.println(t.solution(count, line));
     }
 
-    private String solution(String line) {
+    private String solution(int count, String line) {
         StringBuilder result = new StringBuilder();
 
         line = line.replace("#", "1").replace("*", "0"); // replaceAll은 정규식
 
-        int arrayCount = line.length() / 7;
-
-        for (int i = 0; i < arrayCount; i++) {
+        for (int i = 0; i < count; i++) {
             String spell = line.substring(i * 7, i * 7 + 7);
             result.append((char) Integer.parseInt(spell, 2));
         }
