@@ -1,4 +1,4 @@
-package com.codingtest.study1.session1;
+package com.codingtest.study1.session2;
 
 
 import java.util.ArrayList;

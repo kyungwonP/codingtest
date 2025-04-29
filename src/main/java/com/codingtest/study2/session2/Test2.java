@@ -1,4 +1,4 @@
-package com.codingtest.study2.session1;
+package com.codingtest.study2.session2;
 
 import java.util.Scanner;
 

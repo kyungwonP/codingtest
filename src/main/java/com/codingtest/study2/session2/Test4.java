@@ -1,10 +1,10 @@
-package com.codingtest.study2.session1;
+package com.codingtest.study2.session2;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Test4GPT {
+public class Test4 {
     /**
      * 4. 단어 뒤집기
      * 설명
@@ -18,7 +18,7 @@ public class Test4GPT {
      * N개의 단어를 입력된 순서대로 한 줄에 하나씩 뒤집어서 출력합니다.
      */
     public static void main(String[] args) {
-        Test4GPT t = new Test4GPT();
+        Test4 t = new Test4();
         Scanner in = new Scanner(System.in);
         List<String> words = new ArrayList<>();
 
@@ -35,6 +35,12 @@ public class Test4GPT {
     }
 
     private String solution(String word) {
-        return new StringBuilder(word).reverse().toString();
+        StringBuilder result = new StringBuilder();
+        char[] chars = word.toCharArray();
+
+        for (int x = word.length() - 1; x >= 0; x--) {
+            result.append(chars[x]);
+        }
+        return result.toString();
     }
 }
