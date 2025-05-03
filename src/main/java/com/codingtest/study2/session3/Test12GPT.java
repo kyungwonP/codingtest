@@ -59,16 +59,16 @@ public class Test12GPT {
                         if (currentStudentNumber == mentee) {
                             menteeRank = rank;
                         }
-
-                        if (mentorRank >= menteeRank) {
-                            isValid = false;
-                            break;
-                        }
                     }
 
-                    if (isValid) {
-                        result++;
+                    if (mentorRank >= menteeRank) {
+                        isValid = false;
+                        break;
                     }
+                }
+
+                if (isValid) {
+                    result++;
                 }
             }
         }
