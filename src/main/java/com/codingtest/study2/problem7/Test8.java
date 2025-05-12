@@ -1,4 +1,4 @@
-package com.codingtest.study2.problem8;
+package com.codingtest.study2.problem7;
 
 import java.util.Scanner;
 
