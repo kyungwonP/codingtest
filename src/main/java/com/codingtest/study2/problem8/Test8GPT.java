@@ -31,6 +31,7 @@ public class Test8GPT {
     static boolean found = false;
     static boolean[] used;
     static int[] numbers;
+    static int[][] memo = new int[11][11];
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -84,10 +85,14 @@ public class Test8GPT {
     }
 
     private int combination(int n, int r) {
-        if (n == r || r == 0) {
-            return 1;
+        if (memo[n][r] > 0) {
+            return memo[n][r];
         }
 
-        return combination(n - 1, r - 1) + combination(n - 1, r);
+        if (n == r || r == 0) {
+            return memo[n][r] = 1;
+        }
+
+        return memo[n][r] = combination(n - 1, r - 1) + combination(n - 1, r);
     }
 }
