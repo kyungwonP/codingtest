@@ -2,7 +2,7 @@ package com.codingtest.study2.problem8;
 
 import java.util.Scanner;
 
-public class Test14 {
+public class Test13_1 {
     /**
      * 13. 섬나라 아일랜드(DFS)
      * 설명
@@ -44,7 +44,7 @@ public class Test14 {
 
         in.nextLine();
 
-        System.out.println(new Test14().solution(n, map));
+        System.out.println(new Test13_1().solution(n, map));
     }
 
     private int solution(int n, int[][] map) {
