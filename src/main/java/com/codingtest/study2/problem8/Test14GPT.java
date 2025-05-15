@@ -78,8 +78,8 @@ public class Test14GPT {
     private static void dfs(int level, int start) {
         if (level == m) {
             int totalDistance = calculateDistance();
-
             result = Math.min(result, totalDistance);
+            return;
         }
 
         for (int i = start; i < pizzaStoreCount; i++) {
