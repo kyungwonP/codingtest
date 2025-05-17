@@ -32,6 +32,9 @@ public class Test2 {
 
         @Override
         public int compareTo(Meeting meeting) {
+            if (this.end == meeting.end) {
+                return this.start - meeting.start;
+            }
             return this.end - meeting.end;
         }
     }
